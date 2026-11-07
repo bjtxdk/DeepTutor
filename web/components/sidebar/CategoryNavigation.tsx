@@ -6,7 +6,7 @@ import { useId, useState, startTransition, type ReactNode } from 'react'
 import dynamic from 'next/dynamic'
 import { usePathname, useRouter } from 'next/navigation'
 import { m, useReducedMotion } from 'framer-motion'
-import { MessageCircle, Search, Columns3, PenLine } from 'lucide-react'
+import { BookOpen, MessageCircle, Search, Columns3, PenLine } from 'lucide-react'
 import {
   HomeShelfIcon,
   LearningShelfIcon,
@@ -254,6 +254,9 @@ export function CategoryBody({
       )}
       {(nav.category === 'learning' || nav.visited.includes('learning')) && (
         <div hidden={nav.category !== 'learning'} className="dt-category-panel">
+          {navVisibleUnderPolicy('/french-learning', nav.allowedSurfaces) && (
+            <OverviewRow href="/french-learning" label={t('French Learning')} icon={BookOpen} />
+          )}
           <LearningNavigation active={nav.category === 'learning'} sessions={learningSessions} />
         </div>
       )}

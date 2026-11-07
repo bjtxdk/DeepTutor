@@ -1,6 +1,7 @@
 import { CalendarDays } from 'lucide-react'
 import { LEARNING_HUB } from '@/lib/learning-routes'
 import {
+  BookOpen,
   Bot,
   GraduationCap,
   HeartHandshake,
@@ -60,6 +61,12 @@ export const PRIMARY_NAV: NavEntry[] = [
     icon: GraduationCap,
     tooltipKey: 'One tutor, your own way to learn.',
     surfaces: ['reading', 'chat', 'books'],
+  },
+  {
+    href: '/french-learning',
+    label: 'French Learning',
+    icon: BookOpen,
+    surfaces: ['reading'],
   },
   { href: '/space', label: 'Learning Space', icon: LayoutGrid, tooltipKey: 'Space tooltip' },
   {

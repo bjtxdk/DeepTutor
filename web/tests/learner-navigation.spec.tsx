@@ -8,7 +8,7 @@ vi.mock("@/lib/auth", () => ({ fetchAuthStatus: vi.fn() }));
 beforeEach(() => vi.mocked(fetchAuthStatus).mockReset());
 
 it.each([
-  [["reading"], ["/learning"]],
+  [["reading"], ["/learning", "/french-learning"]],
   [["books"], ["/learning"]],
   [["chat"], ["/chat", "/learning", "/calendar", "/kanban"]],
   [[], []],
